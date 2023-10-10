@@ -1,0 +1,17 @@
+.dashboard{
+    background-color: #F8FAFF;
+}
+.sidebarUl{
+    border-radius: 20px;
+    background: linear-gradient(180deg, #4285F4 0%, #3C83F9 100%);
+    color: white ;
+}
+
+.sidebarUl li span{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
