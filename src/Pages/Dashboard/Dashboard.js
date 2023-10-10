@@ -7,16 +7,22 @@ function Dashboard() {
     options: {
       chart: {
         id: "basic-bar",
+        toolbar: {
+          show: false
+        }
       },
       xaxis: {
         categories: ["week1", "week2", "week3", "week4"],
       },
       plotOptions: {
         bar: {
-          columnWidth: "50%",
+          columnWidth: "30%",
         },
       },
-      toolbar: null,
+      stroke: {
+        colors: ["transparent"],
+        width: 10
+      },
       fill: {
         opacity: 1, // Set opacity to 1 for bars
       },
