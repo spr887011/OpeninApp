@@ -11,6 +11,9 @@ function Dashboard() {
           show: false
         }
       },
+        dataLabels: {
+          enabled: false,
+        },
       xaxis: {
         categories: ["week1", "week2", "week3", "week4"],
       },
