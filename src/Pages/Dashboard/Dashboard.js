@@ -5,6 +5,9 @@ import ReactApexChart from 'react-apexcharts';
 
 function Dashboard() {
 
+  const [showToast, setShowToast] = useState(false);
+  const [isBasic, setIsBasic] = useState(false);  
+
   const [chartData, setChartData] = useState({
     series: [55, 31, 14],
     options: {
@@ -289,20 +292,20 @@ function Dashboard() {
         <div className="grid grid-cols-2  mb-3  text-left ">
          <div className="h-rights"> Dashboard</div>
          <div className="h-rights"> 
-         <ul class="list-none list-inside flex justify-end">
-  <li class=" pl-4"><div class="relative">
-  <input type="text" placeholder="Search" class="search-bar w-full px-1 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring" />
-  {/* <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-600">
-    <svg class="h-3 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <ul className="list-none list-inside flex justify-end">
+  <li className=" pl-4"><div className="relative">
+  <input type="text" placeholder="Search" className="search-bar w-full px-1 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring" />
+  {/* <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-600">
+    <svg className="h-3 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4-4"></path>
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a4 4 0 11-8 0 4 4 0 018 0z"></path>
     </svg>
   </span> */}
 </div></li>
-  <li class="mt-2 pl-4"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" viewBox="0 0 19 22" fill="none">
+  <li className="mt-2 pl-4"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" viewBox="0 0 19 22" fill="none">
 <path d="M16.3861 12.6564V8.91122C16.3861 5.55139 14.2011 2.72107 11.2411 1.86988C10.9481 1.09912 10.2321 0.55603 9.38611 0.55603C8.54011 0.55603 7.82411 1.09912 7.53111 1.86988C4.57111 2.72211 2.38611 5.55139 2.38611 8.91122V12.6564L0.679109 14.4392C0.586067 14.536 0.512279 14.6511 0.461994 14.7778C0.411709 14.9046 0.385919 15.0404 0.386109 15.1776V17.2664C0.386109 17.5434 0.491466 17.809 0.679003 18.0049C0.866539 18.2008 1.12089 18.3108 1.38611 18.3108H17.3861C17.6513 18.3108 17.9057 18.2008 18.0932 18.0049C18.2808 17.809 18.3861 17.5434 18.3861 17.2664V15.1776C18.3863 15.0404 18.3605 14.9046 18.3102 14.7778C18.2599 14.6511 18.1862 14.536 18.0931 14.4392L16.3861 12.6564ZM16.3861 16.222H2.38611V15.61L4.09311 13.8272C4.18615 13.7304 4.25994 13.6153 4.31023 13.4886C4.36051 13.3618 4.3863 13.226 4.38611 13.0888V8.91122C4.38611 6.03181 6.62911 3.68923 9.38611 3.68923C12.1431 3.68923 14.3861 6.03181 14.3861 8.91122V13.0888C14.3861 13.3666 14.4911 13.6319 14.6791 13.8272L16.3861 15.61V16.222ZM9.38611 21.444C10.0054 21.4448 10.6096 21.2441 11.1146 20.8697C11.6196 20.4954 12.0004 19.966 12.2041 19.3552H6.56811C6.77177 19.966 7.15259 20.4954 7.65762 20.8697C8.16265 21.2441 8.76681 21.4448 9.38611 21.444Z" fill="black"/>
 </svg></li>
-  <li class="mt-2 pl-4"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 33 33" fill="none">
+  <li className="mt-2 pl-4"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 33 33" fill="none">
 <circle cx="16.7542" cy="16.7225" r="15.9145" fill="#7FCD93"/>
 </svg></li>
 </ul>
@@ -381,13 +384,13 @@ function Dashboard() {
             <div className=" grid grid-cols-2 gap-4">
           <div className="block date text-left ">May-June 2023</div>
             <div className="flex justify-end"> 
-            <div class="guest mr-6"> 
+            <div className="guest mr-6"> 
             <span className="inline-block mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
 <circle cx="5.52881" cy="5.33032" r="5" fill="#E9A0A0"/></svg></span>
 Guest </div> 
 
-<div class="guest mr-6"> 
+<div className="guest mr-6"> 
             <span className="inline-block mr-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
 <circle cx="5" cy="5.33032" r="5" fill="#9BDD7C"/>
@@ -450,9 +453,9 @@ User </div>
               </div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev  py-4">
-            <div className="block rounded-full w-16 h-16 bg-gray-100 ">
-            
+            <div className="flex items-center justify-center rounded bg-white total-rev  py-5">
+           
+            <div className="block rounded-full w-16 h-16 bg-gray-100 cursor-pointer">
                 <svg
                   className="w-4 h-4 text-gray-400 dark:text-gray-500 mt-6 ml-6"
                   aria-hidden="true"
@@ -470,44 +473,44 @@ User </div>
                 </svg>
               <div className="flex mt-8 add  items-center justify-center">Add Profile</div>
               </div>
-              {/* <div>Add Profile</div> */}
-            
             </div>
-            {/* <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
-
-      {/* <div className="w-full sm:w-1/5   flex flex-col justify-between ">
+      <div className="fixed top-1/2 left-2/4 transform -translate-x-3/4 -translate-y-1/2">
+  <div className="bg-white rounded-lg shadow-lg p-4  toast-form">
+    <div className="flex justify-between px-1 mb-2"><span className="addnewprofile">Add New Profile</span> <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M5.25 5.75L12 12.5M12 12.5L5.25 19.25M12 12.5L18.75 19.25M12 12.5L18.75 5.75" stroke="#999CA0" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button></div>
+    <div className="text-gray-700 border-t border-b border-[#F2F2F2] border-solid border-0.5">
+      <div className="flex justify-between px-2">
+        <div className={`Basic py-4  ${isBasic? 'border-b-4 border-blue-500' : 'border-b-4 border-gray-200'}`}>Basic</div>
+        <div className={`Basic py-4  ${isBasic? 'border-b-4 border-gray-200' : 'border-b-4 border-blue-500'}`}>Contact</div>
+      </div>
+      {isBasic &&
+      <div className="px-4 my-5 formToast">
+       <div className="mb-2 text-left labelToast">Enter Name*</div>
+  <input className="mb-4 inputoast" type="text" />
+  <div className="mb-2 text-left labelToast">Enter Email*</div>
+  <input className="mb-4 inputoast" type="text" />
+  <div className="mb-2 text-left labelToast">Enter Phone*</div>
+  <input className="mb-4 inputoast" type="text" />
+        </div>}
+        {!isBasic &&
+      <div className="px-4 my-5 formToast">
+       <div className="mb-2 text-left labelToast">Instagram Link (Optional)  </div>
+  <input className="mb-4 inputoast" type="text" />
+  <div className="mb-2 text-left labelToast">Youtube Link (Optional)</div>
+  <input className="mb-4 inputoast" type="text" />
+        </div>}
     </div>
-    <div className='w-full sm:w-4/5  '>
-      <div className='' >
-      <Chart
-              options={activities.options}
-              series={activities.series}
-              type="bar"
-              width="90%"
-            />
-            </div>
-    </div> */}
+    <div className="mt-4 flex justify-end">
+    {isBasic ?( <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Next</button>)
+    :(<div> <button className="px-4 py-2 bg-white text-black rounded-md hover:bg-white border-2 border-black">back</button> <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Next</button></div>)}
+     
+    </div>
+  </div>
+</div>
     </div>
   );
 }
