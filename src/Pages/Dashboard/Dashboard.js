@@ -46,7 +46,7 @@ function Dashboard() {
   });
 
   return (
-    <div className="dashboard h-100 overflow-hidden dashboard-page">
+    <div className="dashboard h-full overflow-hidden dashboard-page">
       <button
         data-drawer-target="default-sidebar"
         data-drawer-toggle="default-sidebar"
@@ -76,7 +76,13 @@ function Dashboard() {
         aria-label="Sidebar"
       >
         <div className="h-full  px-3 py-4 overflow-y-auto ">
+          
           <ul className="space-y-2 sidebarUl h-full flex flex-col item-center p-8">
+            <li className="text-center mr-8 mb-6"><span
+                  className=" board  "
+                >
+                  Board.
+                </span></li>
             <li>
               <a
                 href="#"
@@ -227,16 +233,57 @@ function Dashboard() {
                 <span className=" ml-3 whitespace-nowrap">Settings</span>
               </a>
             </li>
+            <div className="absolute bottom-10">
+            <li className="mb-4"><span
+                  className="help"
+                >
+                  Help.
+                </span></li>
+
+                <li><span
+                  className="help"
+                >
+                Contact Us
+                </span></li>
+                </div>
+
           </ul>
+          
+          
+
         </div>
       </aside>
 
       <div className="p-4 sm:ml-64">
-        <div className="p-4  rounded-lg ">
-          <div className="grid grid-cols-4 gap-4 mb-12">
-            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+        <div className="p-4 pt-0 rounded-lg ">
+        <div className="grid grid-cols-2  mb-5  text-left ">
+         <div className="h-rights"> Dashboard</div>
+         <div className="h-rights"> 
+         <ul class="list-none list-inside flex justify-end">
+  <li class=" pl-4"><div class="relative">
+  <input type="text" placeholder="Search" class="search-bar w-full px-1 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring" />
+  {/* <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-600">
+    <svg class="h-3 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4-4"></path>
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a4 4 0 11-8 0 4 4 0 018 0z"></path>
+    </svg>
+  </span> */}
+</div></li>
+  <li class="mt-2 pl-4"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" viewBox="0 0 19 22" fill="none">
+<path d="M16.3861 12.6564V8.91122C16.3861 5.55139 14.2011 2.72107 11.2411 1.86988C10.9481 1.09912 10.2321 0.55603 9.38611 0.55603C8.54011 0.55603 7.82411 1.09912 7.53111 1.86988C4.57111 2.72211 2.38611 5.55139 2.38611 8.91122V12.6564L0.679109 14.4392C0.586067 14.536 0.512279 14.6511 0.461994 14.7778C0.411709 14.9046 0.385919 15.0404 0.386109 15.1776V17.2664C0.386109 17.5434 0.491466 17.809 0.679003 18.0049C0.866539 18.2008 1.12089 18.3108 1.38611 18.3108H17.3861C17.6513 18.3108 17.9057 18.2008 18.0932 18.0049C18.2808 17.809 18.3861 17.5434 18.3861 17.2664V15.1776C18.3863 15.0404 18.3605 14.9046 18.3102 14.7778C18.2599 14.6511 18.1862 14.536 18.0931 14.4392L16.3861 12.6564ZM16.3861 16.222H2.38611V15.61L4.09311 13.8272C4.18615 13.7304 4.25994 13.6153 4.31023 13.4886C4.36051 13.3618 4.3863 13.226 4.38611 13.0888V8.91122C4.38611 6.03181 6.62911 3.68923 9.38611 3.68923C12.1431 3.68923 14.3861 6.03181 14.3861 8.91122V13.0888C14.3861 13.3666 14.4911 13.6319 14.6791 13.8272L16.3861 15.61V16.222ZM9.38611 21.444C10.0054 21.4448 10.6096 21.2441 11.1146 20.8697C11.6196 20.4954 12.0004 19.966 12.2041 19.3552H6.56811C6.77177 19.966 7.15259 20.4954 7.65762 20.8697C8.16265 21.2441 8.76681 21.4448 9.38611 21.444Z" fill="black"/>
+</svg></li>
+  <li class="mt-2 pl-4"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 33 33" fill="none">
+<circle cx="16.7542" cy="16.7225" r="15.9145" fill="#7FCD93"/>
+</svg></li>
+</ul>
+         </div>
+          </div>
+          <div className="grid grid-cols-4 gap-4 mb-4">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-3 text-left">
             <div className="total-rev-width ml-5">
-             <div className="block py-2">Image</div>
+             <div className="block py-2"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+<circle cx="16.7542" cy="16.7225" r="15.9145" fill="#7FCD93"/>
+</svg></div>
              <div className="total-rev-content pb-1">Total Revenues</div>
              <div className="total-rev-amt">$2,129,430</div>
               </div>
@@ -246,9 +293,11 @@ function Dashboard() {
               </div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left">
             <div className="total-rev-width ml-5">
-             <div className="block py-2">Image</div>
+             <div className="block py-2"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+<circle cx="16.7542" cy="16.7225" r="15.9145" fill="#7FCD93"/>
+</svg></div>
              <div className="total-rev-content pb-1">Total Revenues</div>
              <div className="total-rev-amt">$2,129,430</div>
               </div>
@@ -258,9 +307,11 @@ function Dashboard() {
               </div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left">
             <div className="total-rev-width ml-5">
-             <div className="block py-2">Image</div>
+             <div className="block py-2"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+<circle cx="16.7542" cy="16.7225" r="15.9145" fill="#7FCD93"/>
+</svg></div>
              <div className="total-rev-content pb-1">Total Revenues</div>
              <div className="total-rev-amt">$2,129,430</div>
               </div>
@@ -270,9 +321,11 @@ function Dashboard() {
               </div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left">
             <div className="total-rev-width ml-5">
-             <div className="block py-2">Image</div>
+             <div className="block py-2"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+<circle cx="16.7542" cy="16.7225" r="15.9145" fill="#7FCD93"/>
+</svg></div>
              <div className="total-rev-content pb-1">Total Revenues</div>
              <div className="total-rev-amt">$2,129,430</div>
               </div>
@@ -283,22 +336,38 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div className=" rounded bg-white total-rev p-5 h-50 mb-12 rounded">
-          <div className=" grid grid-cols-2 gap-4">
-            <div className="text-left"> sdfffff</div>
-            <div className="text-right"> sfsfsdfsf</div>
+          <div className=" rounded bg-white total-rev p-5 h-50 mb-4 rounded">
+          <div className=" grid grid-cols-1 gap-4">
+          <div className="block py-2 top-prdt text-left ">Top Products</div>
             </div>
-          <div className=" pt-10 h-50">
+            <div className=" grid grid-cols-2 gap-4">
+          <div className="block date text-left ">May-June 2023</div>
+            <div className="flex justify-end"> 
+            <div class="guest mr-6"> 
+            <span className="inline-block mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+<circle cx="5.52881" cy="5.33032" r="5" fill="#E9A0A0"/></svg></span>
+Guest </div> 
+
+<div class="guest mr-6"> 
+            <span className="inline-block mr-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+<circle cx="5" cy="5.33032" r="5" fill="#9BDD7C"/>
+</svg></span>
+User </div> 
+</div>
+            </div>
+          <div className=" h-30">
             <Chart
               options={activities.options}
               series={activities.series}
               type="bar"
               width="100%"
-              height="300px"
+              height="250px"
             />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-10 mb-12">
+          <div className="grid grid-cols-2 gap-10 mb-4">
           <div className="flex rounded bg-white total-rev py-4 text-left totl-prdct">
             <div className="total-rev-width">
              <div className="block py-2 top-prdt ">Top Products</div>
