@@ -16,5 +16,99 @@
     line-height: normal;
 }
 
+.dashboard-page {
+    background-color: #F8FAFF;
+}
+.total-rev {
+    border-radius: 20px;
+    box-shadow: -11px 23px 31px 0px rgba(0,0,0,0.1),-74px -96px 0px -100px #fff;
+    border: 2px solid #E0E0E0;
+}
 
-  
+.total-rev-width {
+    width: 50%;
+}
+
+.total-rev-right {
+    width: 60%;
+border-radius: 34px;
+background: #E9F9EB;
+color: #3CC952;
+text-align: center;
+font-family: Figtree;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+text-transform: uppercase;
+}
+.total-rev-content{
+    font-family: 'Lato', sans-serif;
+font-size: 11px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.total-rev-amt {
+color: #000;
+font-family: Open Sans;
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.top-prdt {
+color: #000;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.date {
+color:  #858585;
+font-family: Montserrat;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.totl-prdct {
+    padding-left: 30px;
+    padding-right: 30px ;
+}
+
+.prots {
+color: #000;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.prots-per {
+    color:  #858585;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+
+.add {
+    color: #858585;
+font-feature-settings: 'clig' off, 'liga' off;
+/* Paragraph/text-md/[S] */
+font-family: Figtree;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+position: relative;
+right: 15px;
+width: 6rem;
+}

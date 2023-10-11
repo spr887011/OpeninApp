@@ -46,7 +46,7 @@ function Dashboard() {
   });
 
   return (
-    <div className="dashboard h-screen overflow-hidden">
+    <div className="dashboard h-100 overflow-hidden dashboard-page">
       <button
         data-drawer-target="default-sidebar"
         data-drawer-toggle="default-sidebar"
@@ -233,66 +233,62 @@ function Dashboard() {
 
       <div className="p-4 sm:ml-64">
         <div className="p-4  rounded-lg ">
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
+          <div className="grid grid-cols-4 gap-4 mb-12">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+            <div className="total-rev-width ml-5">
+             <div className="block py-2">Image</div>
+             <div className="total-rev-content pb-1">Total Revenues</div>
+             <div className="total-rev-amt">$2,129,430</div>
+              </div>
+              <div className="total-rev-width">
+              <div className="total-rev-right ml-5 mt-14">
+              +2.5%
+              </div>
+              </div>
             </div>
-            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
+            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+            <div className="total-rev-width ml-5">
+             <div className="block py-2">Image</div>
+             <div className="total-rev-content pb-1">Total Revenues</div>
+             <div className="total-rev-amt">$2,129,430</div>
+              </div>
+              <div className="total-rev-width">
+              <div className="total-rev-right ml-5 mt-14">
+              +2.5%
+              </div>
+              </div>
             </div>
-            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
+            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+            <div className="total-rev-width ml-5">
+             <div className="block py-2">Image</div>
+             <div className="total-rev-content pb-1">Total Revenues</div>
+             <div className="total-rev-amt">$2,129,430</div>
+              </div>
+              <div className="total-rev-width">
+              <div className="total-rev-right ml-5 mt-14">
+              +2.5%
+              </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-center rounded bg-white total-rev py-4">
+            <div className="total-rev-width ml-5">
+             <div className="block py-2">Image</div>
+             <div className="total-rev-content pb-1">Total Revenues</div>
+             <div className="total-rev-amt">$2,129,430</div>
+              </div>
+              <div className="total-rev-width">
+              <div className="total-rev-right ml-5 mt-14">
+              +2.5%
+              </div>
+              </div>
             </div>
           </div>
-          <div className="  h-50 mb-4 rounded">
+          <div className=" rounded bg-white total-rev p-5 h-50 mb-12 rounded">
+          <div className=" grid grid-cols-2 gap-4">
+            <div className="text-left"> sdfffff</div>
+            <div className="text-right"> sfsfsdfsf</div>
+            </div>
+          <div className=" pt-10 h-50">
             <Chart
               options={activities.options}
               series={activities.series}
@@ -300,9 +296,64 @@ function Dashboard() {
               width="100%"
               height="300px"
             />
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+          <div className="grid grid-cols-2 gap-10 mb-12">
+          <div className="flex rounded bg-white total-rev py-4 text-left totl-prdct">
+            <div className="total-rev-width">
+             <div className="block py-2 top-prdt ">Top Products</div>
+             <div className="total-rev-content pb-1 text-center">Image</div>
+              </div>
+              <div className="total-rev-width">
+              <div className="mt-2 date text-right">
+                May-June 2023
+                </div>
+              <div className="mt-2">
+              <div className="prots">
+              Basic tees
+              </div>
+              <div className="prots-per">
+              55%
+              </div>
+              <div className="prots">
+              Custom Short Pants
+              </div>
+              <div className="prots-per">
+              31%
+              </div>
+              <div className="prots">
+              Super Hoodies
+              </div>
+              <div className="prots-per">
+              14%
+              </div>
+              </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-center rounded bg-white total-rev  py-4">
+            <div className="block rounded-full w-16 h-16 bg-gray-100 ">
+            
+                <svg
+                  className="w-4 h-4 text-gray-400 dark:text-gray-500 mt-6 ml-6"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              <div className="flex mt-8 add  items-center justify-center">Add Profile</div>
+              </div>
+              {/* <div>Add Profile</div> */}
+            
+            </div>
+            {/* <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
               <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
                   className="w-3.5 h-3.5"
@@ -320,26 +371,7 @@ function Dashboard() {
                   />
                 </svg>
               </p>
-            </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
