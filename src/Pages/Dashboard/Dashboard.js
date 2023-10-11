@@ -285,8 +285,8 @@ function Dashboard() {
       </aside>
 
       <div className="p-4 sm:ml-64">
-        <div className="p-4 pt-0 rounded-lg ">
-        <div className="grid grid-cols-2  mb-4  text-left ">
+        <div className="px-4 pb-0 pt-0 rounded-lg ">
+        <div className="grid grid-cols-2  mb-3  text-left ">
          <div className="h-rights"> Dashboard</div>
          <div className="h-rights"> 
          <ul class="list-none list-inside flex justify-end">
@@ -308,7 +308,7 @@ function Dashboard() {
 </ul>
          </div>
           </div>
-          <div className="grid grid-cols-4 gap-4 mb-4">
+          <div className="grid grid-cols-4 gap-4 mb-3">
             <div className="flex items-center justify-center rounded bg-white total-rev py-3 text-left">
             <div className="total-rev-width ml-5">
             <div className="block py-2 circle flex item-center justify-center" style={{ backgroundColor: "#7FCD93" }}>
@@ -374,7 +374,7 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div className=" rounded bg-white total-rev px-5 pb-0 pt-5 h-50 mb-4 rounded">
+          <div className=" rounded bg-white total-rev px-5 pb-0 pt-5 h-50 mb-2 rounded">
           <div className=" grid grid-cols-1 gap-4">
           <div className="block py-2 top-prdt text-left ">Activities</div>
             </div>
@@ -401,7 +401,7 @@ User </div>
               series={activities.series}
               type="bar"
               width="100%"
-              height="185px"
+              height="180px"
             />
             </div>
           </div>
