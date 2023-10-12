@@ -102,3 +102,15 @@
   .signinbtn{
     width: 98%;
   }
+
+  @media (max-width:767px) {
+    .signin-heads {
+      display: flex;
+      justify-content: center;
+    }
+
+    .log-center {
+      width: 75%;
+      margin: auto;
+    }
+  }

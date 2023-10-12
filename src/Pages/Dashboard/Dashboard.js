@@ -311,8 +311,8 @@ function Dashboard() {
 
       <div className="p-4 sm:ml-64">
         <div className="px-4 pb-0 pt-0 rounded-lg ">
-          <div className="grid grid-cols-2  mb-3  text-left ">
-            <div className="h-rights">
+          <div className="grid grid-cols-2  mb-3  text-left space-need">
+            <div className="h-rights ">
               <ul className="list-none list-inside flex justify-start">
                 <li className=" mr-3">
                   <div className="relative">
@@ -380,7 +380,7 @@ function Dashboard() {
               </ul>
             </div>
           </div>
-          <div className="grid gap-4 mb-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 mb-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 space-need">
             <div className="flex items-center justify-center rounded bg-white total-rev py-3 text-left min-h-[95px]">
               <div className="total-rev-width ml-5">
                 <div
@@ -407,7 +407,7 @@ function Dashboard() {
                 <div className="total-rev-right ml-5 mt-14">+2.5%</div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left  min-h-[95px]">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left  min-h-[95px] ">
               <div className="total-rev-width ml-5">
                 <div
                   className="block py-2 circle flex item-center justify-center"
@@ -486,7 +486,7 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div className=" rounded bg-white total-rev px-5 pb-0 pt-5 h-50 mb-2 rounded">
+          <div className=" rounded bg-white total-rev px-5 pb-0 pt-5 h-50 mb-2 rounded space-need">
             <div className=" grid grid-cols-1 gap-4 ">
               <div className="block py-2 top-prdt text-left ">Activities</div>
             </div>
@@ -524,7 +524,7 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className=" h-30">
+            <div className=" h-30 ">
               <Chart
                 options={activities.options}
                 series={activities.series}
@@ -535,7 +535,7 @@ function Dashboard() {
             </div>
           </div>
           <div className="grid  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4 ">
-            <div className="flex rounded bg-white total-rev py-1 text-left totl-prdct">
+            <div className="flex rounded bg-white total-rev py-1 text-left totl-prdct space-need-2">
               <div className="total-rev-width">
                 <div className="block py-1 top-prdt ">Top Products</div>
 
@@ -593,9 +593,9 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev min-h-[180px]">
+            <div className="flex items-center justify-center rounded bg-white total-rev min-h-[180px] space-need">
               {showUserDetails ? (
-                <div className=" text-left block showUserDetails">
+                <div className=" text-left block showUserDetails ">
                  <div className="block py-1 top-prdt mb-3"><h4 className="capitalize">{name}</h4></div>
                   <ul class="list-none list-inside flex justify-between">
   <li class="mb-2"><a className="flex  item-center justify-center">
@@ -771,7 +771,7 @@ function Dashboard() {
                 </div>
               </div>
               {isBasic && (
-                <div className="px-4 my-5 formToast">
+                <div className="px-4 my-5 formToast ">
                   <div className="mb-2 text-left labelToast">Enter Name*</div>
                   <input
                     className="mb-4 inputoast"
