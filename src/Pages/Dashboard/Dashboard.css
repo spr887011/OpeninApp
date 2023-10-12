@@ -185,9 +185,12 @@ line-height: normal;
  }
 
  .toast-form{
-    width: 220%;
+    width: 50%;
  }
 
+ /* .name {
+    width: 50%;
+ } */
  .Basic{
     color: var(--light-bulma, #231F20);
 font-feature-settings: 'clig' off, 'liga' off;
@@ -211,10 +214,7 @@ border-radius: 8px;
 border: 1px solid var(--light-beerus-beerus, #F2F2F2);
 background: var(--light-gohan, #FFF);
 padding: 5px 15px;
- }
-
- .formToast{
-    display: table-caption;
+width:100%;
  }
 
  .labelToast{
@@ -244,4 +244,30 @@ font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 24px;
+ }
+
+ .profile {
+    max-width: initial;
+ }
+ 
+ @media (max-width: 640px){
+    .toast-form{
+        width: 80% ;
+     }
+ }
+
+ .showUserDetails{
+    width: 80%;
+ }
+
+ .userdetailsSpan{
+    color: var(--light-bulma, #231F20);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Figtree;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+text-decoration-line: underline;
+width: 100px;
  }
