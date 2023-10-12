@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Dashboard.css";
 import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
@@ -8,6 +8,28 @@ function Dashboard() {
   const [showToast, setShowToast] = useState(false);
   const [showUserDetails, setShowUserDetails] = useState(false);
   const [isBasic, setIsBasic] = useState(true);
+  const sidebarRef = useRef(null);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [showBar, setShowBar] = useState(false);
+
+  useEffect(() => {
+    // Add an event listener to detect clicks outside the sidebar
+    function handleClickOutside(event) {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        // Clicked outside the sidebar; close the sidebar
+        setSidebarOpen(false);
+      }
+    }
+    if (isSidebarOpen) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isSidebarOpen]);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -113,7 +135,7 @@ function Dashboard() {
     <div className="dashboard h-full overflow-hidden dashboard-page">
       <aside
         id="default-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className={`${showBar? "showBar ":""}fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0`}
         aria-label="Sidebar"
       >
         <div className="h-full  px-3 py-4 overflow-y-auto ">
@@ -295,7 +317,10 @@ function Dashboard() {
                 data-drawer-toggle="default-sidebar"
                 aria-controls="default-sidebar"
                 type="button"
-                className="inline-flex items-center py-1 px-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className={`inline-flex items-center py-1 px-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600`}
+                onClick={()=>{setShowBar(!showBar)
+                console.log(showBar)
+                }}
               >
                 <span className="sr-only">Open sidebar</span>
                 <svg
