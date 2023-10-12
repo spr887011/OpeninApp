@@ -159,9 +159,9 @@ line-height: normal;
 }
 
 .help {
-color: #FFF;
+    color: #FFF;
 font-family: Montserrat;
-font-size: 14px;
+font-size: 14px !important;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
