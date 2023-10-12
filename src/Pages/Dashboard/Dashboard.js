@@ -9,27 +9,30 @@ function Dashboard() {
   const [showUserDetails, setShowUserDetails] = useState(false);
   const [isBasic, setIsBasic] = useState(true);
   const sidebarRef = useRef(null);
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [showBar, setShowBar] = useState(false);
 
-  useEffect(() => {
-    // Add an event listener to detect clicks outside the sidebar
-    function handleClickOutside(event) {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        // Clicked outside the sidebar; close the sidebar
-        setSidebarOpen(false);
-      }
-    }
-    if (isSidebarOpen) {
-      document.addEventListener('click', handleClickOutside);
-    } else {
-      document.removeEventListener('click', handleClickOutside);
-    }
 
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [isSidebarOpen]);
+  useEffect(() => {
+    // Function to handle clicks outside of the sidebar
+    function handleClickOutside(event) {
+      console.log("ref",sidebarRef.current.contains(event.target))
+      if (sidebarRef.current.contains(event.target)) {
+       console.log("false")
+       
+        if (sidebarRef.current.classList.contains("showBar")) {
+          setShowBar(false);
+        }
+      }
+      
+      console.log(sidebarRef)
+     
+    }
+      document.addEventListener('click', handleClickOutside);
+      // return () => {
+      //   document.removeEventListener('click', handleClickOutside);
+      // };
+
+  }, [sidebarRef]); 
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -134,6 +137,7 @@ function Dashboard() {
   return (
     <div className="dashboard h-full overflow-hidden dashboard-page">
       <aside
+      ref={sidebarRef}
         id="default-sidebar"
         className={`${showBar? "showBar ":""}fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0`}
         aria-label="Sidebar"
@@ -318,9 +322,7 @@ function Dashboard() {
                 aria-controls="default-sidebar"
                 type="button"
                 className={`inline-flex items-center py-1 px-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600`}
-                onClick={()=>{setShowBar(!showBar)
-                console.log(showBar)
-                }}
+                onClick={()=>setShowBar(!showBar)}
               >
                 <span className="sr-only">Open sidebar</span>
                 <svg
