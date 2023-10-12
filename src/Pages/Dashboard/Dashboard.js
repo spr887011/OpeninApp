@@ -381,7 +381,7 @@ function Dashboard() {
             </div>
           </div>
           <div className="grid gap-4 mb-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-            <div className="flex items-center justify-center rounded bg-white total-rev py-3 text-left">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-3 text-left min-h-[95px]">
               <div className="total-rev-width ml-5">
                 <div
                   className="block py-2 circle flex item-center justify-center"
@@ -407,7 +407,7 @@ function Dashboard() {
                 <div className="total-rev-right ml-5 mt-14">+2.5%</div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left  min-h-[95px]">
               <div className="total-rev-width ml-5">
                 <div
                   className="block py-2 circle flex item-center justify-center"
@@ -433,7 +433,7 @@ function Dashboard() {
                 <div className="total-rev-right ml-5 mt-14">+1.7%</div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left  min-h-[95px]">
               <div className="total-rev-width ml-5">
                 <div
                   className="block py-2 circle flex item-center justify-center"
@@ -459,7 +459,7 @@ function Dashboard() {
                 <div className="total-rev-right ml-5 mt-14">+4.2%</div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left">
+            <div className="flex items-center justify-center rounded bg-white total-rev py-1 text-left  min-h-[110px]">
               <div className="total-rev-width ml-5">
                 <div
                   className="block py-2 circle flex item-center justify-center"
@@ -534,7 +534,7 @@ function Dashboard() {
               />
             </div>
           </div>
-          <div className="grid  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
+          <div className="grid  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4 ">
             <div className="flex rounded bg-white total-rev py-1 text-left totl-prdct">
               <div className="total-rev-width">
                 <div className="block py-1 top-prdt ">Top Products</div>
@@ -593,7 +593,7 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center rounded bg-white total-rev ">
+            <div className="flex items-center justify-center rounded bg-white total-rev min-h-[180px]">
               {showUserDetails ? (
                 <div className=" text-left block showUserDetails">
                  <div className="block py-1 top-prdt mb-3"><h4 className="capitalize">{name}</h4></div>
@@ -727,7 +727,7 @@ function Dashboard() {
         </div>
       </div>
       {showToast && (
-         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 toast-form">
+         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 toast-form z-50">
          <div className="bg-white rounded-lg shadow-lg p-4 ">
            <div className="flex justify-between px-1 mb-2">
               <span className="addnewprofile">Add New Profile</span>{" "}
