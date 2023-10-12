@@ -281,12 +281,12 @@ function handleAppleClick(){
     <div className="col-span-2 md:col-span-1 flex items-center  text-left sign-right">
     <div>
     <div className="">
-      <h4 className="signin-header signin-heads"> Sign In</h4>
-      <p className="signin-para signin-heads mt-2">Sign in to your account</p>
+      <h4 className="pl-3 signin-header signin-heads"> Sign In</h4>
+      <p className="pl-3 signin-para signin-heads mt-2">Sign in to your account</p>
       </div>
 
-      <div className="flex flex-row mt-2 item-center signin-heads">
-          <button className="social-signin-btn rounded-lg bg-white flex flex-row me-5 mt-3  py-2 px-5"
+      <div className="flex flex-row mt-2 item-center signin-heads d-blocks">
+          <button className="social-signin-btn rounded-lg bg-white flex flex-row me-5 mt-3  py-2 px-5 margins-auto "
             onClick={handleGooogleClick}
             >
               <svg
@@ -327,7 +327,7 @@ function handleAppleClick(){
               </svg>
               <span className="signintext px-3">Sign in with Google</span>
             </button>
-            <button className="social-signin-btn rounded-lg  bg-white  flex flex-row mt-3 py-2 px-5"
+            <button className="social-signin-btn rounded-lg  bg-white  flex flex-row mt-3 py-2 px-5 margins-auto "
             onClick={handleAppleClick}
             >
               <svg
@@ -368,9 +368,9 @@ function handleAppleClick(){
             <br/>
             <button type="submit" className="bg-blue-500 text-white hover:bg-blue-700 font-bold py-2 px-4 rounded-lg mt-4 mb-2 font-montserrat signinbtn">Sign In</button>
             </form>
-            <p className="w-100 m-5 px-6 text-gray-600 font-lato text-base font-normal">Don’t have an account? <a className="text-blue-500 font-lato text-base font-normal">Register here</a></p>
+            
           </div>
-          
+          <p className="w-100 mb-4 text-left ml-7 sign-up-para text-gray-600 font-lato text-base font-normal">Don’t have an account? <a className="text-blue-500 font-lato text-base font-normal sign-up-para">Register here</a></p>
       
       </div>
     </div>

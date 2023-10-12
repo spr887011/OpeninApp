@@ -113,4 +113,35 @@
       width: 75%;
       margin: auto;
     }
+
+    /* .d-blocks {
+      display: block !important;
+    }
+    .margins-auto {
+      margin: auto;
+    } */
+    .sign-up-para {
+      text-align: center;
+    }
+  }
+
+  @media (max-width:450px) {
+    .sign-up-para {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width:991px) and (min-width:768px) {
+    /* .sign-up-para {
+      font-size: 14px;
+    } */
+    .log-center {
+      width: 90%;
+    } 
+  }
+
+  @media (max-width:366px) {
+    .social-signin-btn {
+      padding-right: 0px !important;
+    }
   }
